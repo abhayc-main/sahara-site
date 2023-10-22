@@ -3,4 +3,10 @@
 @tailwind utilities;
 
 
+body {
+  background-color: #f3dbb2; /* Tan color */
+}
 
+#container {
+  background-color: #f3dbb2;
+}

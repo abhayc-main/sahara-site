@@ -1,27 +1,28 @@
 import React from "react";
 import Dash from "./Dash";
 import ServicesCard from "./ServicesCard";
+import { FaNutritionix } from "react-icons/fa";
 
 const servicesData = [
   {
     img: "/services__1.png",
     title: "Professonal Kitchen",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odio.",
+    desc: "Experience the artistry of our professional kitchen in every dish.",
   },
   {
     img: "/services__2.png",
     title: "Delivery",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odio.",
+    desc: "Swift delivery to your doorstep, ensuring your meal is always fresh.",
   },
   {
     img: "/services__3.png",
     title: "Wine List",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odio.",
+    desc: "Stay connected with free WiFi while savoring our Mediterranean delights.",
   },
   {
     img: "/services__4.png",
     title: "Free Wifi",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odio.",
+    desc: "Quench your thirst with our selection of refreshing soft drinks.",
   },
 ];
 
@@ -33,9 +34,8 @@ const Services = () => {
           Choose Best <span className="text-accent">Service</span>
         </h2>
         <p className="text-gray-700">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolorem
+          Empower Your Experience: Select the Supreme Service You Deserve.
           <br />
-          quidem esse eum animi?
         </p>
         <div className="w-fit mx-auto">
           <Dash />
