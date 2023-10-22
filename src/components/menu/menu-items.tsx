@@ -16,7 +16,7 @@ import apeuro from "@/public/people/alexander.webp"
 
 
 
-const courses = [
+export const menuData = [
     {
       "id": "ShwarmaBeefPlate",
       "name": "Beef Plate",
