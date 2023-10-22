@@ -12,7 +12,8 @@ const Hero = () => {
             Mediterranean joint in Redmond
           </p>
           <h2 className="text-4xl sm:text-6xl font-bold">
-            Sahara Mediterranean <span className="text-accent">Kitchen</span>
+
+          Sahara Mediterranean Kitchen <span className="text-accent">Kitchen</span>
           </h2>
           <p className="text-gray-700 text-[14px] sm:text-[16px]">
             Calling all shawarma lovers!
