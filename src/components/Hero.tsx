@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="space-y-4 bg-[#ffffff98] w-fit p-4">
           <p className="uppercase font-medium">Mediterranean joint in Redmond</p>
           <h2 className="text-4xl sm:text-6xl font-bold">
-            Sahara <span className="text-accent">Kitchen</span>
+          Sahara Mediterranean Kitchen <span className="text-accent">Kitchen</span>
           </h2>
           <p className="text-gray-700 text-[14px] sm:text-[16px]">
             Calling all shawarma lovers!
