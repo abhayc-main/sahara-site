@@ -57,7 +57,7 @@ const menuData = [
 
 const Menu = () => {
   return (
-    <div className="container pt-40">
+    <div className="container pt-40" id="menu">
       <div className="space-y-4 w-fit mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold">
           Our <span className="text-accent">Menu</span>

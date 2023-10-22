@@ -1,37 +1,42 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BsTwitter, BsPinterest } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="pt-40 container">
+    <div className="pt-40 container" id="footer">
       <div className="grid md:grid-cols-3 gap-16">
         <div className="space-y-4">
-          <h2 className="text-xl font-bold">About Us</h2>
+          <h2 className="text-xl font-bold">Contact Us</h2>
           <p className="leading-[1.8]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-            atque repudiandae consectetur quibusdam eius dignissimos recusandae,
-            tenetur maiores quos veniam deleniti esse.
+            <p>(425) 522-4718</p>
           </p>
         </div>
 
-        <div className="space-y-4">
-          <h2 className="text-xl font-bold">The Restaurant</h2>
-
-          <ul className="space-y-2">
-            <li>About Us</li>
-            <li>Chefs</li>
-            <li>Events</li>
-            <li>Contact</li>
-          </ul>
+        <div>
+          <p>Hours</p>
+          <p> Sunday - Thursday 11 AM - 9 PM</p>
+          <p> Friday 11 AM - 10 PM</p>
+          <p> Saturday 11 AM - 10 PM</p>
         </div>
 
         <div>
           <div className="flex gap-8 text-accent text-2xl pt-16">
-            <FaFacebookF />
-            <BsTwitter />
-            <BsPinterest />
-            <FaLinkedinIn />
+            <button>
+              <a href="https://www.facebook.com/">
+                <FaFacebookF />
+              </a>
+            </button>
+            <button>
+              <a href="https://twitter.com/">
+                <BsTwitter />
+              </a>
+            </button>
+            <button>
+              <a href="https://www.instagram.com/sahara_redmond/">
+                <FaInstagram />
+              </a>
+            </button>
           </div>
         </div>
       </div>
