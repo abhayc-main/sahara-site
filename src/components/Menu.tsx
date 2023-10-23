@@ -175,6 +175,31 @@ export const menuData = [
     category: "Gyro",
     desc: "Satisfy your hunger with a gyro-style lamb salad.",
   },
+  {
+    id: "Appetizer",
+    name: "Ful",
+    imageUrl: imageVariable,
+    price: "$9.99",
+    category: "Appetizers",
+    desc: "Satisfy your hunger with a fava beans stew"
+  },
+  {
+    id: "Appetizer",
+    name: "Ful and Hummus Mix",
+    imageUrl: imageVariable,
+    price: "$9.99",
+    category: "Appetizers",
+    desc: "Satisfy your hunger with a creamy chickpea dip and fava beans"
+  },
+  {
+    id: "Appetizer",
+    name: "Lamb/Beef/Chicken and Hummus Mix",
+    imageUrl: imageVariable,
+    price: "$9.99",
+    category: "Appetizers",
+    desc: "Seasoned meats harmonize with classic Mediterranean chickpea spread."
+  },
+
 
   {
     id: "AppetizerShawarmaOverHummus",
@@ -207,8 +232,111 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$4.99",
     category: "Desserts",
-    desc: "Savor the sweetness of traditional baklava with honey and nuts.",
+    desc: "Savor the sweetness of traditional baklava with honey and nuts."
   },
+
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Falafel Sandwich",
+    imageUrl: imageVariable,
+    price: "$10.99",
+    category: "Falafel",
+    desc: "Crispy chickpea patties nestled in fresh pita bread."
+  },
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Falafel Veggie Wrap",
+    imageUrl: imageVariable,
+    price: "$10.99",
+    category: "Falafel",
+    desc: "Juicy burger patty, veggies wrapped in toasted bun."
+  },
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Falafel Plate",
+    imageUrl: imageVariable,
+    price: "$10.99",
+    category: "Falafel",
+    desc: "Golden falafel balls and dipping sauce."
+  },
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Falafel Salad",
+    imageUrl: imageVariable,
+    price: "$10.99",
+    category: "Falafel",
+    desc: "Fresh veggies, falafel, with tangy dressing on top."
+  },
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Falafel Mixed Veggie Plate",
+    imageUrl: imageVariable,
+    price: "$10.99",
+    category: "Falafel",
+    desc: "Assorted vegetables, flame-grilled, embodying Mediterranean flavors."
+  },
+
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Lamb Shank",
+    imageUrl: imageVariable,
+    price: "$24.99",
+    category: "Daiy House Specials",
+    desc: "Flavorful spiced lamb dish."
+  },
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Quzi Lamb",
+    imageUrl: imageVariable,
+    price: "$24.99",
+    category: "Daiy House Specials",
+    desc: "Assorted vegetables, flame-grilled, embodying Mediterranean flavors."
+  },
+
+  {
+    id: "AppetizerRegularBaklava",
+    name: "French Fries",
+    imageUrl: imageVariable,
+    price: "$4.99",
+    category: "Appetizers",
+    desc: "Just Fries"
+  },
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Greek Fries",
+    imageUrl: imageVariable,
+    price: "$7.99",
+    category: "Appetizers",
+    desc: "Fries from the Greek Cuisine"
+  },
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Lentil Soup",
+    imageUrl: imageVariable,
+    price: "$5.99",
+    category: "Appetizers",
+    desc: "Hearty, comforting legume broth."
+  },
+
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Tzatziki Sauce",
+    imageUrl: imageVariable,
+    price: "$1.99",
+    category: "Appetizers",
+    desc: "Creamy cucumber yogurt condiment."
+  },
+  
+
+  {
+    id: "AppetizerRegularBaklava",
+    name: "Feta Cheese",
+    imageUrl: imageVariable,
+    price: "$1.99",
+    category: "Appetizers",
+    desc: "Assorted vegetables, flame-grilled, embodying Mediterranean flavors."
+  },
+
 ];
 
 const Menu = () => {
@@ -238,7 +366,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="container pt-40" id="menu">
+    <div className="container pt-40">
       <div className="space-y-4 w-fit mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold">
           Our <span className="text-accent">Menu</span>
@@ -341,3 +469,4 @@ const Menu = () => {
 };
 
 export default Menu;
+
