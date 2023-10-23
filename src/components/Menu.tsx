@@ -1,41 +1,40 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Dash from "./Dash";
 import Image from "next/image";
 import MenuCard from "./MenuCard";
-import imageVariable from "./pizza.jpg"
-import Carousel from './carousel';
-
+import imageVariable from "./pizza.jpg";
+import Carousel from "./carousel";
 
 export const menuData = [
   {
     id: "ShwarmaBeefPlate",
     name: "Beef Plate",
-    imageUrl: imageVariable,
+    imageUrl: "/Beef Shawarma Plate.JPG",
     price: "$17.99",
     category: "Shawarma",
-    desc: "Tender beef shawarma served on a plate with your choice of sides."
+    desc: "Tender beef shawarma served on a plate with your choice of sides.",
   },
   {
     id: "ShwarmaBeefSandwich",
     name: "Beef Sandwich",
-    imageUrl: imageVariable,
+    imageUrl: "/Gyro Lamb and Beef Plate.JPG",
     price: "$12.99",
     category: "Shawarma",
-    desc: "A delicious beef shawarma sandwich with fresh ingredients."
+    desc: "A delicious beef shawarma sandwich with fresh ingredients.",
   },
   {
     id: "ShwarmaBeefSandwich",
     name: "Beef Salad",
-    imageUrl: imageVariable,
+    imageUrl: "/Gyro Beef slash Lamb Salad.JPG",
     price: "$12.99",
     category: "Shawarma",
-    desc: "A delicious beef shawarma salad with fresh ingredients."
+    desc: "A delicious beef shawarma salad with fresh ingredients.",
   },
 
   {
@@ -44,15 +43,15 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$20.99",
     category: "Shawarma",
-    desc: "Savor the flavors with our chicken shawarma plate."
+    desc: "Savor the flavors with our chicken shawarma plate.",
   },
   {
     id: "ShwarmaChickenSalad",
     name: "Chicken Salad",
-    imageUrl: imageVariable,
+    imageUrl: "/Chicken Shawarma Salad.JPG",
     price: "$16.99",
     category: "Shawarma",
-    desc: "A refreshing salad with tender chicken shawarma."
+    desc: "A refreshing salad with tender chicken shawarma.",
   },
   {
     id: "ShwarmaChickenSandwich",
@@ -60,16 +59,16 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$12.99",
     category: "Shawarma",
-    desc: "A flavorful chicken shawarma sandwich made to perfection."
+    desc: "A flavorful chicken shawarma sandwich made to perfection.",
   },
-  
+
   {
     id: "ShwarmaLambPlate",
     name: "Lamb Plate",
     imageUrl: imageVariable,
     price: "$17.99",
     category: "Shawarma",
-    desc: "Indulge in a plate of succulent lamb shawarma."
+    desc: "Indulge in a plate of succulent lamb shawarma.",
   },
   {
     id: "ShwarmaLambSalad",
@@ -77,7 +76,7 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$16.99",
     category: "Shawarma",
-    desc: "A delightful salad topped with savory lamb shawarma."
+    desc: "A delightful salad topped with savory lamb shawarma.",
   },
   {
     id: "ShwarmaLambSandwich",
@@ -85,7 +84,7 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$12.99",
     category: "Shawarma",
-    desc: "Satisfy your cravings with a lamb shawarma sandwich."
+    desc: "Satisfy your cravings with a lamb shawarma sandwich.",
   },
   {
     id: "ShwarmaShawarmaOverHummus",
@@ -93,25 +92,24 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$16.99",
     category: "Shawarma",
-    desc: "A delightful combination of shawarma served over creamy hummus."
+    desc: "A delightful combination of shawarma served over creamy hummus.",
   },
-
 
   {
     id: "GyroBeefPlate",
     name: "Beef Plate",
-    imageUrl: imageVariable,
+    imageUrl: "/Gyro Lamb and Beef Plate.JPG",
     price: "$17.99",
     category: "Gyro",
-    desc: "Enjoy a hearty plate of gyro-style beef."
+    desc: "Enjoy a hearty plate of gyro-style beef.",
   },
   {
     id: "GyroBeefSalad",
     name: "Beef Salad",
-    imageUrl: imageVariable,
+    imageUrl: "/Gyro Beef slash Lamb Salad.JPG",
     price: "$16.99",
     category: "Gyro",
-    desc: "A flavorful salad with gyro-seasoned beef."
+    desc: "A flavorful salad with gyro-seasoned beef.",
   },
   {
     id: "GyroBeefSandwich",
@@ -119,15 +117,15 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$12.99",
     category: "Gyro",
-    desc: "Savor the taste of gyro-style beef in a sandwich."
+    desc: "Savor the taste of gyro-style beef in a sandwich.",
   },
   {
     id: "GyroChickenPlate",
     name: "Chicken Plate",
-    imageUrl: imageVariable,
+    imageUrl: "/Chicken Gyro Plate.JPG",
     price: "$20.99",
     category: "Gyro",
-    desc: "A delicious plate of gyro-seasoned chicken."
+    desc: "A delicious plate of gyro-seasoned chicken.",
   },
   {
     id: "GyroChickenSalad",
@@ -135,7 +133,7 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$16.99",
     category: "Gyro",
-    desc: "A refreshing salad with tender gyro-seasoned chicken."
+    desc: "A refreshing salad with tender gyro-seasoned chicken.",
   },
   {
     id: "GyroChickenSandwich",
@@ -143,23 +141,23 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$12.99",
     category: "Gyro",
-    desc: "A satisfying gyro-style chicken sandwich."
+    desc: "A satisfying gyro-style chicken sandwich.",
   },
   {
     id: "GyroOverGreekFries",
     name: "Gyro Over Greek Fries",
-    imageUrl: imageVariable,
+    imageUrl: "/Lamb and Beef Gyro over Greek Fries.JPG",
     price: "$16.99",
     category: "Gyro",
-    desc: "Indulge in gyro meat served over crispy Greek fries."
+    desc: "Indulge in gyro meat served over crispy Greek fries.",
   },
   {
     id: "GyroLambPlate",
     name: "Lamb Plate",
-    imageUrl: imageVariable,
+    imageUrl: "/Gyro Lamb and Beef Plate.JPG",
     price: "$17.99",
     category: "Gyro",
-    desc: "A plate of gyro-seasoned lamb for a hearty meal."
+    desc: "A plate of gyro-seasoned lamb for a hearty meal.",
   },
   {
     id: "GyroLambSandwich",
@@ -167,15 +165,15 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$12.99",
     category: "Gyro",
-    desc: "Satisfy your hunger with a gyro-style lamb sandwich."
+    desc: "Satisfy your hunger with a gyro-style lamb sandwich.",
   },
   {
     id: "GyroLambSalad",
     name: "Lamb Salad",
-    imageUrl: imageVariable,
+    imageUrl: "/Gyro Beef slash Lamb Salad.JPG",
     price: "$12.99",
     category: "Gyro",
-    desc: "Satisfy your hunger with a gyro-style lamb salad."
+    desc: "Satisfy your hunger with a gyro-style lamb salad.",
   },
 
   {
@@ -184,9 +182,8 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$16.99",
     category: "Shawarma",
-    desc: "A delightful appetizer featuring shawarma over creamy hummus."
+    desc: "A delightful appetizer featuring shawarma over creamy hummus.",
   },
-
 
   {
     id: "AppetizerChocolateRolledBaklava",
@@ -194,7 +191,7 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$4.99",
     category: "Desserts",
-    desc: "Indulge in a sweet treat with chocolate-infused baklava."
+    desc: "Indulge in a sweet treat with chocolate-infused baklava.",
   },
   {
     id: "AppetizerPistachioBaklava",
@@ -202,7 +199,7 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$4.99",
     category: "Desserts",
-    desc: "A classic dessert made with layers of flaky pastry and pistachio filling."
+    desc: "A classic dessert made with layers of flaky pastry and pistachio filling.",
   },
   {
     id: "AppetizerRegularBaklava",
@@ -210,10 +207,9 @@ export const menuData = [
     imageUrl: imageVariable,
     price: "$4.99",
     category: "Desserts",
-    desc: "Savor the sweetness of traditional baklava with honey and nuts."
-  }
+    desc: "Savor the sweetness of traditional baklava with honey and nuts.",
+  },
 ];
-
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -221,24 +217,25 @@ const Menu = () => {
 
   useEffect(() => {
     if (selectedCategory) {
-      setFilteredMenuData(menuData.filter(item => item.category === selectedCategory));
+      setFilteredMenuData(
+        menuData.filter((item) => item.category === selectedCategory)
+      );
     } else {
       setFilteredMenuData(menuData);
     }
   }, [selectedCategory]);
 
-  const handleCategorySelect = (category : any) => {
+  const handleCategorySelect = (category: any) => {
     setSelectedCategory(category);
   };
 
   const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4, // change this for the number of cards you want to show at once
-        slidesToScroll: 1
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // change this for the number of cards you want to show at once
+    slidesToScroll: 1,
   };
-  
 
   return (
     <div className="container pt-40" id="menu">
@@ -257,35 +254,73 @@ const Menu = () => {
       </div>
 
       <ul className="mt-10 hidden sm:flex gap-6 md:gap-10 lg:gap-20 w-fit mx-auto mb-8">
-       
-       <li>
-            <button onClick={() => handleCategorySelect('Gyro')} className="rounded px-4 py-2 bg-accent text-white">Gyro</button>
+        <li>
+          <button
+            onClick={() => handleCategorySelect("Gyro")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Gyro
+          </button>
         </li>
         <li>
-            <button onClick={() => handleCategorySelect('Shawarma')} className="rounded px-4 py-2 bg-accent text-white">Shawarma</button>
+          <button
+            onClick={() => handleCategorySelect("Shawarma")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Shawarma
+          </button>
         </li>
         <li>
-            <button onClick={() => handleCategorySelect('Appetizers')} className="rounded px-4 py-2 bg-accent text-white">Appetizers</button>
+          <button
+            onClick={() => handleCategorySelect("Appetizers")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Appetizers
+          </button>
         </li>
         <li>
-            <button onClick={() => handleCategorySelect('Kebab')} className="rounded px-4 py-2 bg-accent text-white">Kebabs</button>
+          <button
+            onClick={() => handleCategorySelect("Kebab")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Kebabs
+          </button>
         </li>
         <li>
-          <button onClick={() => handleCategorySelect('Falafel')} className="rounded px-4 py-2 bg-accent text-white">Falafel</button>
+          <button
+            onClick={() => handleCategorySelect("Falafel")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Falafel
+          </button>
         </li>
         <li>
-          <button onClick={() => handleCategorySelect('Daily House Specials')} className="rounded px-4 py-2 bg-accent text-white">Daily House Specials</button>
+          <button
+            onClick={() => handleCategorySelect("Daily House Specials")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Daily House Specials
+          </button>
         </li>
         <li>
-          <button onClick={() => handleCategorySelect('Sides')} className="rounded px-4 py-2 bg-accent text-white">Sides</button>
+          <button
+            onClick={() => handleCategorySelect("Sides")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Sides
+          </button>
         </li>
         <li>
-          <button onClick={() => handleCategorySelect('Desserts')} className="rounded px-4 py-2 bg-accent text-white">Desserts</button>
+          <button
+            onClick={() => handleCategorySelect("Desserts")}
+            className="rounded px-4 py-2 bg-accent text-white"
+          >
+            Desserts
+          </button>
         </li>
-    </ul>
-      
+      </ul>
 
-       <Slider {...settings}>
+      <Slider {...settings}>
         {filteredMenuData.map((item) => (
           <MenuCard
             key={item.id}
